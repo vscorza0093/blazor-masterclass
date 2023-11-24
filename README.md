@@ -3,14 +3,7 @@ Masterclass Blazor com André Baltieri - Balta.io
 Utilizando Blazor com Dotnet 8.0
 
 
-`Pacote Flunt - Criado pelo balta`
-
-
-## Razor
-
-Razor é o motor de renderização que a Microsoft usa para front-end, que nos permite interpolar HTML com C#, esse motor já era utilizado pelo ASP.NET e também pelo Blazor nas suas versões anteriores
-
-## Enranced Navigation
+## Enhanced Navigation
 
 A navegação do Blazor agora funciona como uma Single Page Application, mas renderiza como um Server Side Render, onde todo o corpo do HTML é gerado pelo servidor e devolvido para o usuário para que haja interação atualizada em tempo real
 
@@ -72,7 +65,7 @@ Esse componente é um arquivo `.razor` e ele será automaticamente integrado ao 
 <h1>Counter</h1>
 
 <Incrementer 
-    CurrentCount="100"
+    CurrentCount="0"
     Text="Incrementar"
     @rendermode="InteractiveServer">
 </Incrementer>
@@ -120,8 +113,6 @@ E o que o Stream Rendering faz é renderizar progressivamente a página final, s
 
 Através de um simples if statement nós podemos controlar este fluxo de informações e escolher o que o usuário verá enquanto a aplicação está requisitando dados do servidor.
 
-
-## Fluent Map
 
 ## Entity Framework e criação do banco de dados
 
@@ -248,34 +239,12 @@ Podemos substituir o `ValidationSumary` pelo `ValidationMessage` passando o par�
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Bibliografia
 
 [1] RenderModes............................https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0
 
-[2] Curso de Entity Framework - Balta.io
+[2] Curso de Entity Framework - Balta.io...........
 
-[3] E-Book sobre Nulls - Balta.io
+[3] E-Book sobre Nulls - Balta.io............
 
-[4] Connection String
+[4] Connection String - .........................
