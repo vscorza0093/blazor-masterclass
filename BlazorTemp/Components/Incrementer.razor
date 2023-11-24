@@ -1,0 +1,15 @@
+﻿<h3>Incrementer</h3>
+<p role="status">Current count: @CurrentCount</p>
+<button class="btn btn-primary" @onclick="IncrementCount">@Text</button>
+
+@code {
+    [Parameter]
+    public int? CurrentCount { get; set; }
+    [Parameter]
+    public string? Text { get; set; } = "Click Me";
+
+    private void IncrementCount()
+    {
+        CurrentCount++;
+    }
+}

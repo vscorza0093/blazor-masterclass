@@ -1,0 +1,42 @@
+﻿@page "/categories"
+@inject AppDbContext Context
+@attribute [StreamRendering]
+
+<h3>List</h3>
+
+@if(Categories.Count() == 0)
+{
+    <p><em>Carregando...</em></p>
+}   
+else
+{
+    
+    <ul>
+        @foreach(var item in Categories)
+        {
+            <li>
+                @item.Title
+            </li>
+        }
+    </ul>
+
+    <button>
+        <NavLink class="nav-link" href="categories/create">
+            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> New Email
+        </NavLink>
+    </button>
+
+    @code {
+        public IEnumerable<Category> Categories { get; set; } = Enumerable.Empty<Category>();
+
+        protected override async Task OnInitializedAsync()
+        {
+            await Task.Delay(3000);
+
+            Categories = await Context
+                .Categories
+                .AsNoTracking() //Não faz track dos objetos e otimiza a leitura
+                .ToListAsync();
+        }
+    }
+}
